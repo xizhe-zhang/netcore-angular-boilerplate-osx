@@ -10,6 +10,9 @@ node {
         dir('src/AbpCompanyName.AbpProjectName.EntityFrameworkCore') {
             sh 'sudo dotnet restore'
         }
+        dir('src/AbpCompanyName.AbpProjectName.Web.Host') {
+            sh 'sudo dotnet build'
+        }
    }
    stage('Do deploy') {
         sh 'sudo rm -r -f /opt/p7/aspnet-core/src/AbpCompanyName.AbpProjectName.Web.Host/bin/Debug/netcoreapp2.0/*'
