@@ -1,10 +1,10 @@
 node {
    stage('Clear Working Directory') { // for display purposes
-        sh 'sudo rm -r -f src/*'
+        sh 'sudo rm -r -f aspnet-core/src/*'
 		deleteDir()
    }
    stage('Copy Source Code') { // for display purposes
-		sh 'cp -r ../API_SEOM@script/src .'
+		sh 'cp -r ../API_SEOM@script/aspnet-core/src .'
    } 
    stage('Build dotnet') {
         dir('aspnet-core/src/AbpCompanyName.AbpProjectName.EntityFrameworkCore') {
