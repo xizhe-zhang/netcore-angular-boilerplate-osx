@@ -32,7 +32,7 @@ namespace AbpCompanyName.AbpProjectName.Authorization.Accounts
             return new IsTenantAvailableOutput(TenantAvailabilityState.Available, tenant.Id);
         }
 
-        public async Task<RegisterOutput> Register(RegisterInput input)
+        public async Task<RegisterOutput> Register2(RegisterInput input)
         {
             var user = await _userRegistrationManager.RegisterAsync(
                 input.Name,
