@@ -14,7 +14,7 @@ node {
    stage('Do deploy') {
         sh 'sudo rm -r -f /opt/p7/aspnet-core/src/AbpCompanyName.AbpProjectName.Web.Host/bin/Debug/netcoreapp2.0/*'
         sh 'sudo supervisorctl stop PhotoGalleryP7'
-        sh 'sudo cp -r src/AbpCompanyName.AbpProjectName.Web.Host/bin/Debug/netcoreapp2.0/* /opt/p7/aspnet-core/src/AbpCompanyName.AbpProjectName.Web.Host/bin/Debug/netcoreapp2.0'
+        sh 'sudo cp -r aspnet-core/src/AbpCompanyName.AbpProjectName.Web.Host/bin/Debug/netcoreapp2.0/* /opt/p7/aspnet-core/src/AbpCompanyName.AbpProjectName.Web.Host/bin/Debug/netcoreapp2.0'
         sh 'sudo supervisorctl start PhotoGalleryP7'    
    }
 }
