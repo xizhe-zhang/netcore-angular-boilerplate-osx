@@ -14,6 +14,7 @@ namespace AbpCompanyName.AbpProjectName.Web.Startup
         {
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:5200/")
                 .Build();
         }
     }
